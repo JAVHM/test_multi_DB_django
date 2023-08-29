@@ -77,7 +77,22 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+DATABASES = {
+    'default': {},
+    'users_db': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'users.db.sqlite3',
+    },
+    'organization_db': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'organization.db.sqlite3',
+    },
+    'crash_game_db': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'crash_game.db.sqlite3',
+    },
+}
+'''
 DATABASES = {
     'default': {},
     'users_db': {
@@ -108,8 +123,7 @@ DATABASES = {
         "CONN_HEALTH_CHECKS": True,
     },
 }
-
-
+'''
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
